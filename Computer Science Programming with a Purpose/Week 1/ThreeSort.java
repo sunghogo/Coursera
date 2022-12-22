@@ -14,7 +14,8 @@ public class ThreeSort {
         mid = Math.min(mid, num3);
 
         minimum = Math.min(minimum, mid);
-        mid = Math.max(minimum, maximum);
+        mid = Math.max(minimum, mid);
+
 
         // Print in ascending order
         System.out.println(minimum);
