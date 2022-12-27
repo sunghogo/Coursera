@@ -19,7 +19,7 @@ public class BandMatrix {
                 if (j == n-1) {
                     System.out.println("");
                 } else {
-                    System.out.print(" ");
+                    System.out.print("  ");
                 }
             }
         }
