@@ -13,6 +13,13 @@ public class RandomWalker {
         while ( Math.abs(x) + Math.abs(y) != r) {
             // Generate random probability 0 - 100
             int prob = (int) Math.round(Math.random() * 100);
+            // Regenerate probability if 100
+            if (prob == 100) {
+                while (prob == 100) {
+                    prob = (int) Math.round(Math.random() * 100);
+                }
+            }
+            // Random step
             if (prob < 25) {
                 x++; 
             } else if (prob < 50) {
