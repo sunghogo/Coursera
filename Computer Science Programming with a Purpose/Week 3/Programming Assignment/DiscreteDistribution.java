@@ -10,7 +10,7 @@ public class DiscreteDistribution {
 
         // For M trials, randomly generate number within range of Sn - 1 and find corresponding index/n
         for (int i = 1; i < M+1; i++) {
-            int prob = (int) (Math.random() * runningSum);
+            double prob = Math.round(Math.random() * (runningSum - 1));
             int index = -1;
             for (int j = 1; j < args.length; j++) {
                 prob -= Integer.parseInt(args[j]);
