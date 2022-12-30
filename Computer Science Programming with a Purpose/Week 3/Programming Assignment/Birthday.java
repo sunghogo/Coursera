@@ -7,11 +7,13 @@ public class Birthday {
         // Initialize fraction of people with same birthday and person counter
         double fraction = 0.0;
         int i = 1;
+        double tempRunningSum = 0.0;
+        double runningSum = 0.0;
 
         // Iterate through i number of person and generate fraction until fraction >= 0.5,
         while (fraction < 0.5) {
             // Initialize count of matching birthdays, exact count of matching person being the ith person, and birthday array
-            double count = 0.0;
+           tempRunningSum = runningSum;
             int exactCount = 0;
             long[] birthdays = new long[i];
 
@@ -22,7 +24,6 @@ public class Birthday {
                     birthdays[j] = (long) (Math.random() * n);
                     for (int k = j-1; k >= 0; k--) {
                         if (birthdays[j] == birthdays[k]) {
-                            count++;
                             if (j == i-1) {
                                 exactCount++;
                             }
@@ -31,13 +32,17 @@ public class Birthday {
                     }
                 }        
             }
+            tempRunningSum += exactCount;
 
             // Calculate fraction and make sure it is monotone nondecreasing
-            double tempFraction = (count/trials);
-            if (tempFraction < fraction) {
-                continue;
+            double tempFraction = (tempRunningSum/trials);
+            if (tempFraction <= fraction || tempFraction > 1.0) {
+                if (i != 1) {
+                    continue;
+                }
             }
-            fraction = (count/trials);
+            runningSum = tempRunningSum;
+            fraction = (runningSum/trials);
 
 
             // Print and increment person count
