@@ -35,7 +35,7 @@ public class ThueMorse {
                 if (j + 1 == N) {
                     System.out.println();
                 } else {
-                    System.out.print(" ");
+                    System.out.print("  ");
                 }
             }
         }
