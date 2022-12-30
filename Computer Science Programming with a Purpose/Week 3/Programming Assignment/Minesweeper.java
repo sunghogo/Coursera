@@ -73,7 +73,7 @@ public class Minesweeper {
                 if (y+1 == m) {
                     System.out.println();
                 } else {
-                    System.out.print(" ");
+                    System.out.print("  ");
                 }
             }
         }
