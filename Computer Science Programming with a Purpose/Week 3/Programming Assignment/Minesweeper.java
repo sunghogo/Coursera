@@ -31,32 +31,50 @@ public class Minesweeper {
         }
 
         // Print reservoir
+        /*
         for (int i = 0; i < k; i++) {
             System.out.print(reservoir[i] + " ");
         }
         System.out.println();
+        */
 
-        // Reset rest of the grid elements to 0
+        // Generate mines grid element = -1
         for (int x = 0; x < m; x++) {
             for (int y = 0; y < n; y++) {
-                grid[x][y] = 0;
+                for (int i = 0; i < k; i++) {
+                    if (grid[x][y] == reservoir[i]) {
+                        grid[x][y] = -1;
+                        break;
+                    }
+                }
             }
         }
 
-        // Generate mines as element value -1 and increment surrounding areas
-        for (int i = 0; i < k; i++) {
-            int row = (reservoir[i]-1) / m;
-            int column = (reservoir[i]-1) % m;
-            System.out.println(row + " " + column);
-            grid[row][column] = -1;
-            if (row-1 >= 0) { if (grid[row-1][column] != -1) grid[row-1][column] += 1;}
-            if (row+1 < m) { if (grid[row+1][column] != -1) grid[row+1][column] += 1;}
-            if (column-1 >= 0) { if (grid[row][column-1] != -1) grid[row][column-1] += 1;}
-            if (column+1 < n) { if (grid[row][column+1] != -1) grid[row][column+1] += 1;}
-            if (row-1 >= 0 && column-1 >= 0) { if (grid[row-1][column-1] != -1) grid[row-1][column-1] += 1;}
-            if (row+1 < m && column-1 >= 0) { if (grid[row+1][column-1] != -1) grid[row+1][column-1] += 1;}
-            if (row-1 >= 0 && column+1 < n) { if (grid[row-1][column+1] != -1) grid[row-1][column+1] += 1;}
-            if (row+1 < m && column+1 < n) { if (grid[row+1][column+1] != -1) grid[row+1][column+1] += 1;}
+        // Reset rest of the grid elements to 0 and generate mines
+        for (int x = 0; x < m; x++) {
+            for (int y = 0; y < n; y++) {
+                if (grid[x][y] != -1) {
+                    grid[x][y] = 0;
+                }
+            }
+        }
+
+        //  Increment surrounding areas of mine
+        for (int x = 0; x < m; x++) {
+            for (int y = 0; y < n; y++) {
+                int row = x;
+                int column = y;
+                if (grid[row][column] == -1) {
+                    if (row-1 >= 0) { if (grid[row-1][column] != -1) grid[row-1][column] += 1;}
+                    if (row+1 < m) { if (grid[row+1][column] != -1) grid[row+1][column] += 1;}
+                    if (column-1 >= 0) { if (grid[row][column-1] != -1) grid[row][column-1] += 1;}
+                    if (column+1 < n) { if (grid[row][column+1] != -1) grid[row][column+1] += 1;}
+                    if (row-1 >= 0 && column-1 >= 0) { if (grid[row-1][column-1] != -1) grid[row-1][column-1] += 1;}
+                    if (row+1 < m && column-1 >= 0) { if (grid[row+1][column-1] != -1) grid[row+1][column-1] += 1;}
+                    if (row-1 >= 0 && column+1 < n) { if (grid[row-1][column+1] != -1) grid[row-1][column+1] += 1;}
+                    if (row+1 < m && column+1 < n) { if (grid[row+1][column+1] != -1) grid[row+1][column+1] += 1;}
+                }
+            }
         }
 
         // Print grid
