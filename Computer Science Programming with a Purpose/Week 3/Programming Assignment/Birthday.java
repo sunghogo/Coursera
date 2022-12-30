@@ -13,13 +13,13 @@ public class Birthday {
             // Initialize count of matching birthdays, exact count of matching person being the ith person, and birthday array
             double count = 0.0;
             int exactCount = 0;
-            double birthdays[] = new double[i];
+            long[] birthdays = new long[i];
 
             for (int t = 0; t < trials; t++) {
                 // Iterate through each person, generate random birthday, and compare birthday
                 personIterate:
                 for (int j = 0; j < i; j++) {
-                    birthdays[j] = Math.round((Math.random() * (n-1)));
+                    birthdays[j] = (long) (Math.random() * n);
                     for (int k = j-1; k >= 0; k--) {
                         if (birthdays[j] == birthdays[k]) {
                             count++;
@@ -32,8 +32,13 @@ public class Birthday {
                 }        
             }
 
-            // Calculate fraction
+            // Calculate fraction and make sure it is monotone nondecreasing
+            double tempFraction = (count/trials);
+            if (tempFraction < fraction) {
+                continue;
+            }
             fraction = (count/trials);
+
 
             // Print and increment person count
             System.out.println(i + " " + exactCount + " " + fraction);
