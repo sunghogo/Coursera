@@ -21,7 +21,7 @@ public class Minesweeper {
             reservoir[i] = i+1;
         }
         for (int i = k; i < m*n; i++) {
-            double prob = Math.round(Math.random() * (i+1));
+            long prob = (long) (Math.random() * (i+1));
             for (int j = 0; j < k; j++) {
                 if (prob == reservoir[j]) {
                     reservoir[j] = i+1;
@@ -31,12 +31,10 @@ public class Minesweeper {
         }
 
         // Print reservoir
-        /*
         for (int i = 0; i < k; i++) {
             System.out.print(reservoir[i] + " ");
         }
         System.out.println();
-        */
 
         // Reset rest of the grid elements to 0
         for (int x = 0; x < m; x++) {
@@ -49,6 +47,7 @@ public class Minesweeper {
         for (int i = 0; i < k; i++) {
             int row = (reservoir[i]-1) / m;
             int column = (reservoir[i]-1) % m;
+            System.out.println(row + " " + column);
             grid[row][column] = -1;
             if (row-1 >= 0) { if (grid[row-1][column] != -1) grid[row-1][column] += 1;}
             if (row+1 < m) { if (grid[row+1][column] != -1) grid[row+1][column] += 1;}
@@ -70,7 +69,7 @@ public class Minesweeper {
                 }
 
                 // Handle White Spaces
-                if (y+1 == m) {
+                if (y+1 == n) {
                     System.out.println();
                 } else {
                     System.out.print("  ");
