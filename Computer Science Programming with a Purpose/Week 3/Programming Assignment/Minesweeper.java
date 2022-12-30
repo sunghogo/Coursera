@@ -50,14 +50,14 @@ public class Minesweeper {
             int row = (reservoir[i]-1) / m;
             int column = (reservoir[i]-1) % m;
             grid[row][column] = -1;
-            if (row-1 >= 0 && grid[row-1][column] != -1) { grid[row-1][column] += 1;}
-            if (row+1 < m && grid[row+1][column] != -1) { grid[row+1][column] += 1;}
-            if (column-1 >= 0 && grid[row][column-1] != -1) { grid[row][column-1] += 1;}
-            if (column+1 < n && grid[row][column+1] != -1) { grid[row][column+1] += 1;}
-            if (row-1 >= 0 && column-1 >= 0 && grid[row-1][column-1] != -1) { grid[row-1][column-1] += 1;}
-            if (row+1 < m && column-1 >= 0 && grid[row+1][column-1] != -1) { grid[row+1][column-1] += 1;}
-            if (row-1 >= 0 && column+1 < n && grid[row-1][column+1] != -1) { grid[row-1][column+1] += 1;}
-            if (row+1 < m && column+1 < n && grid[row+1][column+1] != -1) { grid[row+1][column+1] += 1;}
+            if (row-1 >= 0) { if (grid[row-1][column] != -1) grid[row-1][column] += 1;}
+            if (row+1 < m) { if (grid[row+1][column] != -1) grid[row+1][column] += 1;}
+            if (column-1 >= 0) { if (grid[row][column-1] != -1) grid[row][column-1] += 1;}
+            if (column+1 < n) { if (grid[row][column+1] != -1) grid[row][column+1] += 1;}
+            if (row-1 >= 0 && column-1 >= 0) { if (grid[row-1][column-1] != -1) grid[row-1][column-1] += 1;}
+            if (row+1 < m && column-1 >= 0) { if (grid[row+1][column-1] != -1) grid[row+1][column-1] += 1;}
+            if (row-1 >= 0 && column+1 < n) { if (grid[row-1][column+1] != -1) grid[row-1][column+1] += 1;}
+            if (row+1 < m && column+1 < n) { if (grid[row+1][column+1] != -1) grid[row+1][column+1] += 1;}
         }
 
         // Print grid
