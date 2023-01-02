@@ -27,6 +27,6 @@ public class Checkerboard {
                 StdDraw.filledSquare(x + 0.5, y + 0.5, 0.5);
             }
         }
-        StdDraw.show(20);
+        StdDraw.show();
     }
 }
