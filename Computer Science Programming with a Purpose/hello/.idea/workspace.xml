@@ -91,7 +91,7 @@
       <recent name="C:\Users\Daniel\Desktop\Coursera\Computer Science Programming with a Purpose\hello" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.PlotFilter">
+  <component name="RunManager" selected="Application.Chaos">
     <configuration name="AddTwo" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="AddTwo" />
       <module name="Computer Science" />
@@ -107,6 +107,12 @@
       <option name="MAIN_CLASS_NAME" value="Barnsley" />
       <module name="Computer Science" />
       <option name="PROGRAM_PARAMETERS" value="10000" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Chaos" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="Chaos" />
+      <module name="Computer Science" />
+      <option name="PROGRAM_PARAMETERS" value="10" />
       <method v="2" />
     </configuration>
     <configuration name="CollidingDisks" type="Application" factoryName="Application">
