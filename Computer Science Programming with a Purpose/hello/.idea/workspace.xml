@@ -91,7 +91,7 @@
       <recent name="C:\Users\Daniel\Desktop\Coursera\Computer Science Programming with a Purpose\hello" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.BouncingBall">
+  <component name="RunManager" selected="Application.BouncingBallDeluxe">
     <configuration name="AddTwo" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="AddTwo" />
       <module name="Computer Science" />
@@ -111,6 +111,11 @@
     </configuration>
     <configuration name="BouncingBall" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="BouncingBall" />
+      <module name="Computer Science" />
+      <method v="2" />
+    </configuration>
+    <configuration name="BouncingBallDeluxe" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="BouncingBallDeluxe" />
       <module name="Computer Science" />
       <method v="2" />
     </configuration>
