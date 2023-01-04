@@ -217,6 +217,15 @@
           <url>file://$PROJECT_DIR$/HelloWorld.java</url>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/Week 5 Lecture Examples/PlayThatChord.java</url>
+          <line>1</line>
+          <properties class="PlayThatChord" method="avg">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
