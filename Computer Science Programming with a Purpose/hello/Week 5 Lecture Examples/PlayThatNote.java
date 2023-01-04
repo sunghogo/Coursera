@@ -6,7 +6,7 @@ public class PlayThatNote {
             a[i] = Math.sin(2 * Math.PI * i * hz / 44100);
         return a;
     }
-
+    
     public static void main(String[] args) {
         double hz = Double.parseDouble(args[0]);
         double duration = Double.parseDouble(args[1]);
