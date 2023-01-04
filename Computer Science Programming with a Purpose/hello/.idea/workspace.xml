@@ -91,7 +91,7 @@
       <recent name="C:\Users\Daniel\Desktop\Coursera\Computer Science Programming with a Purpose\hello" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.PlayThatNote">
+  <component name="RunManager" selected="Application.PlayThatChord">
     <configuration name="AddTwo" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="AddTwo" />
       <module name="Computer Science" />
@@ -139,6 +139,12 @@
     <configuration name="HelloWorld" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="HelloWorld" />
       <module name="Computer Science" />
+      <method v="2" />
+    </configuration>
+    <configuration name="PlayThatChord" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="PlayThatChord" />
+      <module name="Computer Science" />
+      <option name="PROGRAM_PARAMETERS" value="0 12 3.0" />
       <method v="2" />
     </configuration>
     <configuration name="PlayThatNote" type="Application" factoryName="Application">
