@@ -91,7 +91,7 @@
       <recent name="C:\Users\Daniel\Desktop\Coursera\Computer Science Programming with a Purpose\hello" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.PlayThatChord">
+  <component name="RunManager" selected="Application.RandomPoints">
     <configuration name="AddTwo" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="AddTwo" />
       <module name="Computer Science" />
@@ -156,6 +156,12 @@
     <configuration name="PlotFilter" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="PlotFilter" />
       <module name="Computer Science" />
+      <method v="2" />
+    </configuration>
+    <configuration name="RandomPoints" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="RandomPoints" />
+      <module name="Computer Science" />
+      <option name="PROGRAM_PARAMETERS" value="10000" />
       <method v="2" />
     </configuration>
     <configuration name="Triangle" type="Application" factoryName="Application">
