@@ -91,7 +91,7 @@
       <recent name="C:\Users\Daniel\Desktop\Coursera\Computer Science Programming with a Purpose\hello" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.RandomPoints">
+  <component name="RunManager" selected="Application.Bernoulli">
     <configuration name="AddTwo" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="AddTwo" />
       <module name="Computer Science" />
@@ -107,6 +107,12 @@
       <option name="MAIN_CLASS_NAME" value="Barnsley" />
       <module name="Computer Science" />
       <option name="PROGRAM_PARAMETERS" value="10000" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Bernoulli" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="Bernoulli" />
+      <module name="Computer Science" />
+      <option name="PROGRAM_PARAMETERS" value="20 10000" />
       <method v="2" />
     </configuration>
     <configuration name="BouncingBall" type="Application" factoryName="Application">
