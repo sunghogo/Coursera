@@ -27,7 +27,24 @@ public class ActivationFunction {
 
     // Returns the hyperbolic tangent of x.
     public static double tanh(double x) {
-        if (Double.isNaN(x)) {
+        if (Double.isInfinite(x)) {
+            if (x > 0) {
+                return 1.0;
+            }
+            else {
+                return -1.0;
+            }
+        }
+        else if (x == Double.MAX_VALUE) {
+            return 1.0;
+        }
+        else if (x == -Double.MAX_VALUE) {
+            return -1.0;
+        }
+        else if (x == Double.MIN_VALUE || x == -Double.MIN_VALUE) {
+            return x;
+        }
+        else if (Double.isNaN(x)) {
             return Double.NaN;
         }
 
@@ -36,7 +53,15 @@ public class ActivationFunction {
 
     // Returns the softsign function of x.
     public static double softsign(double x) {
-        if (Double.isNaN(x)) {
+        if (Double.isInfinite(x)) {
+            if (x > 0) {
+                return 1.0;
+            }
+            else {
+                return -1.0;
+            }
+        }
+        else if (Double.isNaN(x)) {
             return Double.NaN;
         }
 
