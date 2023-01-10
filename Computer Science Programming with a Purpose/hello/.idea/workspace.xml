@@ -92,7 +92,7 @@
       <recent name="C:\Users\Daniel\Desktop\Coursera\Computer Science Programming with a Purpose\hello" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Divisors">
+  <component name="RunManager" selected="Application.AudioCollage">
     <configuration name="ActivationFunction" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="ActivationFunction" />
       <module name="Computer Science" />
@@ -103,6 +103,11 @@
       <option name="MAIN_CLASS_NAME" value="AddTwo" />
       <module name="Computer Science" />
       <option name="PROGRAM_PARAMETERS" value="1 2" />
+      <method v="2" />
+    </configuration>
+    <configuration name="AudioCollage" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="AudioCollage" />
+      <module name="Computer Science" />
       <method v="2" />
     </configuration>
     <configuration name="Average" type="Application" factoryName="Application">
