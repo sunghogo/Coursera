@@ -6,20 +6,25 @@ public class Divisors {
         int y = b;
 
         while (true) {
-            if (x == 0 || y == 0) {
+            if (x == 0) {
+                gcd = Math.abs(y);
+                break;
+            }
+            else if (y == 0) {
+                gcd = Math.abs(x);
                 break;
             }
             else if (Math.abs(x) > Math.abs(y)) {
                 x = x % y;
                 if (x == 0) {
-                    gcd = y;
+                    gcd = Math.abs(y);
                     break;
                 }
             }
             else {
                 y = y % x;
                 if (y == 0) {
-                    gcd = x;
+                    gcd = Math.abs(x);
                     break;
                 }
             }

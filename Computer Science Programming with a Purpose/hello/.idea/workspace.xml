@@ -152,7 +152,7 @@
     <configuration name="Divisors" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="Divisors" />
       <module name="Computer Science" />
-      <option name="PROGRAM_PARAMETERS" value="0 0" />
+      <option name="PROGRAM_PARAMETERS" value="0 5" />
       <method v="2" />
     </configuration>
     <configuration name="HelloWorld" type="Application" factoryName="Application">
