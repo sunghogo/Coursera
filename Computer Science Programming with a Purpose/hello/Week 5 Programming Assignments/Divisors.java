@@ -9,7 +9,7 @@ public class Divisors {
             if (x == 0 || y == 0) {
                 break;
             }
-            else if (x > y) {
+            else if (Math.abs(x) > Math.abs(y)) {
                 x = x % y;
                 if (x == 0) {
                     gcd = y;
@@ -30,6 +30,9 @@ public class Divisors {
 
     // Returns the least common multiple of a and b.
     public static int lcm(int a, int b) {
+        if (a == 0 || b == 0) {
+            return 0;
+        }
         return Math.abs(a * b) / gcd(a, b);
     }
 
@@ -60,7 +63,6 @@ public class Divisors {
     public static void main(String[] args) {
         int a = Integer.parseInt(args[0]);
         int b = Integer.parseInt(args[1]);
-
 
         StdOut.println("gcd(" + a + ", " + b + ") = " + gcd(a, b));
         StdOut.println("lcm(" + a + ", " + b + ") = " + lcm(a, b));
