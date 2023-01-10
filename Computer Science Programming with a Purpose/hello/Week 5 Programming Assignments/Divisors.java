@@ -6,16 +6,22 @@ public class Divisors {
         int y = b;
 
         while (true) {
-            if (x > y) {
-                y = y % x;
-                gcd = x;
-            }
-            else {
-                x = x % y;
-                gcd = y;
-            }
             if (x == 0 || y == 0) {
                 break;
+            }
+            else if (x > y) {
+                x = x % y;
+                if (x == 0) {
+                    gcd = y;
+                    break;
+                }
+            }
+            else {
+                y = y % x;
+                if (y == 0) {
+                    gcd = x;
+                    break;
+                }
             }
         }
 
@@ -24,27 +30,42 @@ public class Divisors {
 
     // Returns the least common multiple of a and b.
     public static int lcm(int a, int b) {
-
+        return Math.abs(a * b) / gcd(a, b);
     }
 
 
     // Returns true if a and b are relatively prime; false otherwise.
     public static boolean areRelativelyPrime(int a, int b) {
-
+        return !(gcd(a, b) > 1);
     }
 
 
     // Returns the number of integers between 1 and n that are
     // relatively prime with n.
     public static int totient(int n) {
+        int relativelyPrime = 0;
 
+        for (int i = 1; i < n + 1; i++) {
+            if (areRelativelyPrime(n, i)) {
+                relativelyPrime++;
+            }
+        }
+
+        return relativelyPrime;
     }
 
 
     // Takes two integer command-line arguments a and b and prints
     // each function, evaluated in the format (and order) given below.
     public static void main(String[] args) {
+        int a = Integer.parseInt(args[0]);
+        int b = Integer.parseInt(args[1]);
 
+
+        StdOut.println("gcd(" + a + ", " + b + ") = " + gcd(a, b));
+        StdOut.println("lcm(" + a + ", " + b + ") = " + lcm(a, b));
+        StdOut.println("areRelativelyPrime(" + a + ", " + b + ") = " + areRelativelyPrime(a, b));
+        StdOut.println("totient(" + a + ") = " + totient(a));
+        StdOut.println("totient(" + b + ") = " + totient(b));
     }
-
 }
