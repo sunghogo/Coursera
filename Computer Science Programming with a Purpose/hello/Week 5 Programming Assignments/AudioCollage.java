@@ -89,6 +89,22 @@ public class AudioCollage {
     // Creates an audio collage and plays it on standard audio.
     // See below for the requirements.
     public static void main(String[] args) {
+        double[] beatbox = StdAudio.read("beatbox.wav");
+        double[] scratch = StdAudio.read("scratch.wav");
+        double[] silence = StdAudio.read("silence.wav");
+        double[] piano = StdAudio.read("piano.wav");
+        double[] singer = StdAudio.read("singer.wav");
+        double[] collage;
 
+        scratch = reverse(scratch);
+        beatbox = amplify(beatbox, 1.25);
+        silence = changeSpeed(silence, 2.0);
+        double[] duo = merge(piano, singer);
+
+        collage = merge(beatbox, scratch);
+        collage = merge(collage, silence);
+        collage = merge(collage, duo);
+
+        StdAudio.play(collage);
     }
 }
