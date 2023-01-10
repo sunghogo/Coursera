@@ -38,12 +38,15 @@ public class Divisors {
         if (a == 0 || b == 0) {
             return 0;
         }
-        return Math.abs(a * b) / gcd(a, b);
+        return Math.abs(a) * (Math.abs(b) / gcd(a, b));
     }
 
 
     // Returns true if a and b are relatively prime; false otherwise.
     public static boolean areRelativelyPrime(int a, int b) {
+        if (a == 0 && b == 0) {
+            return false;
+        }
         return !(gcd(a, b) > 1);
     }
 
