@@ -75,24 +75,24 @@
     <option name="showModules" value="false" />
     <option name="sortByType" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;11&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Daniel/Desktop/Coursera/Computer Science Programming with a Purpose/hello&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "jdk.selected.JAVA_MODULE": "11",
+    "last_opened_file_path": "C:/Users/Daniel/Desktop/Coursera/Computer Science Programming with a Purpose/hello",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.general"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Daniel\Desktop\Coursera\Computer Science Programming with a Purpose\hello" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.AudioCollage">
+  <component name="RunManager" selected="Application.Binary">
     <configuration name="ActivationFunction" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="ActivationFunction" />
       <module name="Computer Science" />
@@ -125,6 +125,12 @@
       <option name="MAIN_CLASS_NAME" value="Bernoulli" />
       <module name="Computer Science" />
       <option name="PROGRAM_PARAMETERS" value="20 10000" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Binary" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="Binary" />
+      <module name="Computer Science" />
+      <option name="PROGRAM_PARAMETERS" value="60" />
       <method v="2" />
     </configuration>
     <configuration name="BouncingBall" type="Application" factoryName="Application">
